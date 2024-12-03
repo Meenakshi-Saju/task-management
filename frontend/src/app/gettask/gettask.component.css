@@ -1,0 +1,20 @@
+.homepage-div {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .homepage-div {
+    background-color: color(srgb rgb(134, 6, 6));
+  }
+
+  .card {
+
+    color: rgba(174, 174, 211, 0.806);
+    background-color: rgb(147, 205, 205);
+    /* Ensure text is readable on a dark background */
+  }
+}

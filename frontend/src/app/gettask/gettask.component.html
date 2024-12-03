@@ -1,0 +1,52 @@
+<app-loginnavbar></app-loginnavbar>
+<div class="homepage-div">
+  <div class="card" style="padding: 10px; margin: 20px ;">
+    <h1 class="card-title" style="font-size: 32px; font-weight: bold;">To-Do</h1>
+    <div *ngFor="let task of TaskData" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+      <div class="card" style="padding: 8px; margin: 10px; cursor: pointer" *ngIf="task.status === 'todo'"
+        (click)="taskId(task.id)">
+        <h5 class="card-text" style="font-size: 21px; font-weight: bold;">
+          {{ task.title }}
+        </h5>
+        <p>{{ task.description }}</p>
+        <p><b>Start Time:</b> {{ task.startTime }}</p>
+        <p><b>End Time:</b> {{ task.endTime }}</p>
+      </div>
+    </div>
+    <a class="btn btn-primary" (click)="openTask('todo')" style="margin: 20px;">Add Task</a>
+  </div>
+
+  <div class="card" style="padding: 10px; margin: 20px">
+    <h1 class="card-title" style="font-size: 32px; font-weight: bold;">Doing</h1>
+    <div *ngFor="let task of TaskData" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+      <div class="card" style="padding: 8px; margin: 10px; cursor: pointer" *ngIf="task.status === 'doing'"
+        (click)="taskId(task.id)">
+        <h5 class="card-text" style="font-size: 21px; font-weight: bold;">
+          {{ task.title }}
+        </h5>
+        <p>{{ task.description }}</p>
+        <p><b>Start Time:</b> {{ task.startTime }}</p>
+        <p><b>End Time:</b> {{ task.endTime }}</p>
+      </div>
+    </div>
+    <a class="btn btn-primary" (click)="openTask('doing')" style="margin: 20px;">Add Task</a>
+  </div>
+
+  <div class="card" style="padding: 10px; margin: 20px">
+    <h1 class="card-title" style="font-size: 32px; font-weight: bold;">Done</h1>
+    <div *ngFor="let task of TaskData" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+      <div class="card" style="padding: 8px; margin: 10px; cursor: pointer" *ngIf="task.status === 'done'"
+        (click)="taskId(task.id)">
+        <h5 class="card-text" style="font-size: 21px; font-weight: bold;">
+          {{ task.title }}
+        </h5>
+        <p>{{ task.description }}</p>
+        <p><b>Start Time:</b> {{ task.startTime }}</p>
+        <p><b>End Time:</b> {{ task.endTime }}</p>
+      </div>
+    </div>
+    <a class="btn btn-primary" (click)="openTask('done')" style="margin: 20px;">Add Task</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

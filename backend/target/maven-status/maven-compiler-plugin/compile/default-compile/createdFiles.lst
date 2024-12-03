@@ -1,0 +1,10 @@
+com\example\taskManagement\DTO\UserLoginDTO.class
+com\example\taskManagement\Entity\User.class
+com\example\taskManagement\Entity\Task.class
+com\example\taskManagement\DTO\UserDTO.class
+com\example\taskManagement\Repo\TaskRepo.class
+com\example\taskManagement\Controller\TaskController.class
+com\example\taskManagement\Service\TaskService.class
+com\example\taskManagement\DTO\TaskDTO.class
+com\example\taskManagement\TaskManagementApplication.class
+com\example\taskManagement\Repo\TaskRepository.class

@@ -1,0 +1,21 @@
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+
+        /* Smaller text for small screens */
+    }
+
+    .container {
+        flex-direction: column;
+        background-color: color(srgb rgb(134, 6, 6));
+        /* Stack items vertically */
+    }
+}
+
+/* For screens larger than 600px */
+@media (min-width: 601px) {
+    body {
+        font-size: 18px;
+    }
+}

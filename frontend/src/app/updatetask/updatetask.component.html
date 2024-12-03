@@ -1,0 +1,24 @@
+<app-loginnavbar></app-loginnavbar>
+<div class="card-body p-5">
+  <h2 class="text-uppercase text-center mb-5">UPDATE TASK  </h2>
+<form>
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control form-control-lg" id="exampleInputTaskTitle" name="title" placeholder="Enter Task" value={{title}} #taskTitle>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control form-control-lg" id="exampleInputTaskDescription" name="description" placeholder="Enter Description" value={{desc}} #taskDesc>
+  </div>
+
+  <button type="button" class="btn btn-success btn-block" (click)="update(taskTitle.value , taskDesc.value)">Update</button>
+  <button type="button" class="btn btn-success btn-block" (click)="delete()">Delete</button>
+  <button type="button" class="btn btn-success btn-block" (click)="changeStatus()">Change Status</button>
+
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" *ngIf="flag" style="margin-top: 26px;" (change)="getStatus($event)">
+    <option value="todo">Status</option>
+    <option value="todo">To-Do</option>
+    <option value="done">Done</option>
+    <option value="doing">Doing</option>
+  </select>
+</form>
+</div>
+<router-outlet></router-outlet>

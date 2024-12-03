@@ -1,0 +1,14 @@
+<app-loginnavbar></app-loginnavbar>
+<div class="card-body p-5">
+  <h2 class="text-uppercase text-center mb-5">ADD TASK  </h2>
+<form>
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control form-control-lg" id="exampleInputTaskTitle" name="title" placeholder="Enter Task" [(ngModel)]="title">
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control form-control-lg" id="exampleInputTaskDescription" name="description" placeholder="Enter Description" [(ngModel)]="desc">
+  </div>
+  <button type="button" class="btn btn-success btn-block" (click)="addTask()">Add Task</button>
+</form>
+</div>
+<router-outlet></router-outlet>
